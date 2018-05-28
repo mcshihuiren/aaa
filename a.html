@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<!-- {{ message }} -->
+		<!-- <span v-bind:title='message'>
+			我是mc王陀螺
+		</span> -->
+		<!-- <p v-if='seen'>我看到你们了</p> -->
+		<!-- <ul>
+			<li v-for='todo in tod '>
+			{{ todo.bl }}
+			</li>
+		</ul> -->
+		<!-- <h1>{{ asd }}</h1> -->
+		<!-- <input type="text" class="form-control" v-model="asd" >	 -->
+		<!-- <input type="text" class="form-control" v-model="asd" >	 -->
+		<!-- <form action="" v-on:submit.prevent='add()'>
+			<input  v-model="newtod.bl" type="text"  >
+			<input type="submit" >
+		</form> -->
+		<hr>
+		<h1>{{asd}}</h1>
+		<button v-on:click='fx()'>dianwo</button>
+
+		<ul>
+			<todo-item 
+			v-for='item in list'
+			v-bind:todo='item'
+			v-bind:key='item.id'>
+			</todo-item>
+		</ul>
+		<input v-model.number="age" type="number">
+	</div>
+	
+
+</body>
+<script src = '../vue/vue.js'></script>
+<script>
+	// Vue.component('todo-item',{
+	// 	props:['todo'],
+	// 	template:'<li>{{todo.text}}</li>'
+	// });
+	var data={a:1}
+	var vm=new Vue({
+		data:data
+	});
+	vm.a=data.a;
+	data.a=9;	
+	console.log(vm.a);
+	// new Vue({
+	// el:'#app',  
+	// data:{
+		// message:'大渣好'+new Date().toLocaleString()
+		// seen:false
+		// txt:'hah',
+		// asd:'asd'
+		// tod: [
+			// { id:1,bl:'两眼朝天，各走一边'},
+			// { id:2,bl:'不想理你'},
+		// ],
+		// newtod:{id:null,bl:'ad'},
+		// 	asd:'我系渣渣辉',
+		// 	list:[
+		// 		{id:0,text:'A'},
+		// 		{id:1,text:'D'},
+		// 		{id:2,text:'系'},
+		// 	]
+		// },
+		// methods:{
+		// 	add:function(){
+		// 		this.tod.push(this.newtod);
+		// 		this.newtod={id:null,bl:''};
+		// 	},
+	// 		fx:function(){
+	// 			this.asd=this.asd.split('').reverse('').join('')
+	// 		}
+
+	// 	}
+	// })
+
+</script>
+</html>
